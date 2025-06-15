@@ -11,7 +11,7 @@
   <style>
     .navbar-custom {
       background-color: rgba(255, 255, 255, .3);
-      backdrop-filter: blur(10px)
+      backdrop-filter: blur(10px);
     }
 
     .pt-3 {
@@ -56,10 +56,10 @@
 
     header .intro {
       z-index: 100;
-      color: fff;
+      color: #fff;
       text-align: center;
       position: relative;
-      top: 50%
+      top: 50%;
     }
 
     header .intro h3 {
@@ -316,7 +316,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="../pw2025_tubes_243040090/tampilan/tatatertib.php">Tata Tertib</a></li>
-              <li><a class="dropdown-item" href="../pw2025_tubes_243040090/tampilaN/pinjaman.php">Pinjaman</a></li>
+              <li><a class="dropdown-item" href="../pw2025_tubes_243040090/tampilan/pinjaman.php">Pinjaman</a></li>
               <li><a class="dropdown-item" href="../pw2025_tubes_243040090/tampilan/kunjungan.php">Kunjungan</a></li>
               <li><a class="dropdown-item" href="../pw2025_tubes_243040090/tampilan/surveykepuasan.php">Survey kepuasan</a></li>
             </ul>
@@ -338,7 +338,7 @@
         <h3>Selamat Datang di <br>Perpustakaan Universitas Pasundan</h3>
         <p>Perpustakaan Universitas Pasundan merupakan bagian Integral dari Institusi Perguruan Tinggi untuk menunjang pelaksanaan Program Tridharma Perguruan Tinggi yang meliputi: Pendidikan, Pengajaran, Penelitian, serta Pengabdian pada Masyarakat...</p>
         <p>
-          <a href="#login.php" class="btn btn-outline-light">Login untuk Selengkapnya</a>
+          <a href="../pw2025_tubes_243040090/sign/link_login.html" class="btn btn-outline-light">Login untuk Selengkapnya</a>
         </p>
       </div>
     </header>
@@ -426,7 +426,7 @@
         <div class="col">
           <h4 class="pt-3">Informasi</h4>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="../pw2025_tubes_243040090/index.php" class="text-decoration-none text-light"><i class="bi bi-house"></i> Home</a></li>
+            <li class="mb-2"><a href="index.php" class="text-decoration-none text-light"><i class="bi bi-house"></i> Home</a></li>
             <li class="mb-2"><a href="../pw2025_tubes_243040090/tampilan/book.php" class="text-decoration-none text-light"><i class="bi bi-book"></i> Katalog Buku</a></li>
             <li class="mb-2"><a href="../pw2025_tubes_243040090/tampilan/tatatertib.php" class="text-decoration-none text-light"><i class="bi bi-clipboard2-pulse"></i> Tata Tertib</a></li>
             <li class="mb-2"><a href="../pw2025_tubes_243040090/tampilan/pinjaman.php" class="text-decoration-none text-light"><i class="bi bi-journal-code"></i> Pinjaman</a></li>

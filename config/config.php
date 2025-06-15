@@ -1,4 +1,8 @@
 <?php
+// Tambahkan di awal file utama (misal index.php)
+ini_set('display_errors', 0);
+error_reporting(0);
+
 $host = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -9,7 +13,9 @@ $connection = mysqli_connect($host, $username, $password, $database_name);
 function queryReadData($dataKategori)
 {
   global $connection;
-  $result = mysqli_query($connection, $dataKategori);
+  $stmt = mysqli_prepare($connection, $dataKategori);
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
   $items = [];
   while ($item = mysqli_fetch_assoc($result)) {
     $items[] = $item;
@@ -90,27 +96,18 @@ function upload()
 
 function search($keyword)
 {
-
-  $querySearch = "SELECT * FROM buku 
-  WHERE
-  judul LIKE '%$keyword%' OR
-  kategori LIKE '%$keyword%'
-  ";
-  return queryReadData($querySearch);
-
-  $dataPengembalian = "SELECT * FROM pengembalian 
-  WHERE 
-  id_pengembalian '%$keyword%' OR
-  id_buku LIKE '%$keyword%' OR
-  judul LIKE '%$keyword%' OR
-  kategori LIKE '%$keyword%' OR
-  nim LIKE '%$keyword%' OR
-  nama LIKE '%$keyword%' OR
-  nama_admin LIKE '%$keyword%' OR
-  tgl_pengembalian LIKE '%$keyword%' OR
-  keterlambatan LIKE '%$keyword%' OR
-  denda LIKE '%$keyword%'";
-  return queryReadData($dataPengembalian);
+  global $connection;
+  $querySearch = "SELECT * FROM buku WHERE judul LIKE ? OR kategori LIKE ?";
+  $stmt = mysqli_prepare($connection, $querySearch);
+  $param = "%$keyword%";
+  mysqli_stmt_bind_param($stmt, "ss", $param, $param);
+  mysqli_stmt_execute($stmt);
+  $result = mysqli_stmt_get_result($stmt);
+  $items = [];
+  while ($item = mysqli_fetch_assoc($result)) {
+    $items[] = $item;
+  }
+  return $items;
 }
 
 function searchMember($keyword)
