@@ -300,8 +300,8 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="../">
-        <img src="../pw2025_tubes_243040090/assets/logo.png" alt="logo" width="30" height="30">
+      <a class="navbar-brand" href="index.php">
+        <img src="assets/logo.png" alt="logo" width="30" height="30">
         Perpustakaan Universitas Pasundan
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -332,13 +332,13 @@
     <header id="home">
       <div class="overlay"></div>
       <video autoplay muted loop>
-        <source src="../pw2025_tubes_243040090/assets/video.mp4" type="video/mp4">
+        <source src="assets/video.mp4" type="video/mp4">
       </video>
       <div class="intro">
         <h3>Selamat Datang di <br>Perpustakaan Universitas Pasundan</h3>
         <p>Perpustakaan Universitas Pasundan merupakan bagian Integral dari Institusi Perguruan Tinggi untuk menunjang pelaksanaan Program Tridharma Perguruan Tinggi yang meliputi: Pendidikan, Pengajaran, Penelitian, serta Pengabdian pada Masyarakat...</p>
         <p>
-          <a href="../pw2025_tubes_243040090/sign/link_login.html" class="btn btn-outline-light">Login untuk Selengkapnya</a>
+          <a href="sign/link_login.html" class="btn btn-outline-light">Login untuk Selengkapnya</a>
         </p>
       </div>
     </header>
